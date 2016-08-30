@@ -3,6 +3,9 @@
 
 #include "cocos2d.h"
 
+#define TAG_MENUITEM_PLAY			0
+#define TAG_MENUITEM_QUIT			1
+
 class HelloWorld : public cocos2d::Layer
 {
 public:
@@ -11,8 +14,9 @@ public:
     virtual bool init();
     
     // a selector callback
-    void menuCloseCallback(cocos2d::Ref* pSender);
-    
+    void menuCallback(cocos2d::Ref* pSender);
+	void initBG();
+	void initMenu();
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
 };
